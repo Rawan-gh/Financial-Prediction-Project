@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Financial Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="content">
+
+        <div class="div-title">
+            <h1>FINANCIAL PREDICTION</h1>
+        <br>
+        </div>
+        <div class="div-form">
+        <div class="form">
+            <form action="/" method="Post">
+
+                <label for="interest_rate">
+                    <p>Enter Interest Rate <input type="text" name="interest_rate" id="interest_rate" placeholder="e.g. 2.5"></p>
+                </label>
+
+                <label for="employment">
+                    <p>Enter Employment Rate <input type="text" name="employment" id="employment" placeholder="e.g. 70"></p>
+                </label>
+
+                <input type="submit" value="Submit" class="submit-button">
+            </form>
+        </div>
+
+        <div>
+            {% if prediction == -2 %}
+                <h2 class="output-text"> PLEASE ENTER VALID DATA </h2>
+            {% elif prediction != -1 %}
+                <h2 class="output-text">PREDICTION RESULT: {{ prediction }}</h2>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+</body>
+</html>
